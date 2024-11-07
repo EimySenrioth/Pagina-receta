@@ -1,0 +1,164 @@
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 15px 0;
+    margin: 0;
+}
+
+#menu li {
+    margin: 0 20px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+#menu a:hover {
+    color: #ff5733;
+}
+
+#menu p {
+    margin: 0;
+}
+
+/* Ajuste para el contenido debajo del menú fijo */
+body {
+    padding-top: 50px; /* Ajusta este valor según la altura de tu menú para evitar espacio extra debajo*/
+}
+  
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Header a 100% */
+header {
+    background-color: #ff5733;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    z-index: 10; /* Asegura que el encabezado quede por encima de los anuncios */
+}
+
+/* Contenedor principal al 60% */
+/* Contenedor general */
+.container {
+    width: 60%;           /* El contenedor tiene un ancho del 60% */
+    max-width: 1200px;    /* Ancho máximo de 1200px */
+    margin: 0 auto;
+    padding: 40px;
+    z-index: 5;           /* Asegura que el contenedor no quede encima de los anuncios */
+}
+
+/* Estilo para cada sección dentro del contenedor */
+.intro, .detalles, .ingredientes, .instrucciones, .consejos, .variantes {
+    margin: 20px 0;
+}
+
+/* Estilo para la imagen dentro de .intro */
+.intro img {
+    width: 100%;        /* La imagen ocupará el 100% del ancho del contenedor */
+    height: auto;       /* La altura se ajusta automáticamente para mantener la proporción */
+    max-width: 800px;   /* Esto limita el tamaño máximo a 800px */
+    display: block;
+    margin: 0 auto;     /* Centra la imagen */
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .intro img {
+        width: 100%;     /* Asegura que la imagen ocupe el 100% del ancho en pantallas pequeñas */
+        max-width: 100%; /* Elimina el límite máximo en pantallas pequeñas */
+    }
+}
+
+/* Si deseas ajustar el tamaño de la imagen en pantallas grandes */
+@media (min-width: 1200px) {
+    .intro img {
+        width: 90%;      /* Puedes ajustar esto si prefieres que no ocupe todo el ancho */
+        max-width: 800px;
+    }
+}
+
+
+h2 {
+    color: #ff5733;
+    margin-bottom: 10px;
+}
+
+p, ul, ol {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+ul, ol {
+    padding-left: 20px;
+}
+
+strong {
+    color: #ff5733;
+}
+
+/* Anuncios laterales */
+.ad-left, .ad-right {
+    position: fixed; /* Cambié absolute por fixed para que los anuncios queden en la pantalla */
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    background-color: #ccc;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Los anuncios deben estar detrás del contenido principal */
+}
+
+.ad-left {
+    left: 0;
+}
+
+.ad-right {
+    right: 0;
+}
+
+/* Footer a 100% */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin-top: 20px;
+    z-index: 10; /* Asegura que el pie de página quede por encima de los anuncios */
+}
+
